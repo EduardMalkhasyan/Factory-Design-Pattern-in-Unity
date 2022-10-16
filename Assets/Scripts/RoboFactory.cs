@@ -24,7 +24,7 @@ public class RoboFactory : ScriptableObject
         RoboCitizenFacotry.BodyColor(bodyMesh);
     }
 
-    public void Rotate()
+    public void RotateThing()
     {
         Thing.Rotate();
     }

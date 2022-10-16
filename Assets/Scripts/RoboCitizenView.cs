@@ -30,6 +30,6 @@ public class RoboCitizenView : MonoBehaviour
 
     private void Update()
     {
-        roboFactoryObject.Rotate();
+        roboFactoryObject.RotateThing();
     }
 }
