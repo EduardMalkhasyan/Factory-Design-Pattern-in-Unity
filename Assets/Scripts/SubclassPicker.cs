@@ -31,18 +31,17 @@ public class SubclassPickerDrawer : PropertyDrawer
         dropdownRect.x += EditorGUIUtility.labelWidth + 2;
         dropdownRect.width -= EditorGUIUtility.labelWidth + 2;
         dropdownRect.height = EditorGUIUtility.singleLineHeight;
+
         if (EditorGUI.DropdownButton(dropdownRect, new(typeName), FocusType.Keyboard))
         {
             GenericMenu menu = new GenericMenu();
 
-            // null
             menu.AddItem(new GUIContent("None"), property.managedReferenceValue == null, () =>
             {
                 property.managedReferenceValue = null;
                 property.serializedObject.ApplyModifiedProperties();
             });
 
-            // inherited types
             foreach (Type type in GetClasses(t))
             {
                 menu.AddItem(new GUIContent(type.Name), typeName == type.Name, () =>
@@ -53,6 +52,7 @@ public class SubclassPickerDrawer : PropertyDrawer
             }
             menu.ShowAsContext();
         }
+
         EditorGUI.PropertyField(position, property, label, true);
     }
 }
