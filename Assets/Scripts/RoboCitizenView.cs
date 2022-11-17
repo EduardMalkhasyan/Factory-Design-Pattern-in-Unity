@@ -9,7 +9,7 @@ using UnityEngine;
 public class RoboCitizenView : MonoBehaviour
 {
     [SerializeField]
-    private RoboFactory roboFactoryObject;
+    private RoboFactorySO roboFactoryObject;
 
     [SerializeField]
     private Transform thingParent;

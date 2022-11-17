@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "RoboItem", menuName = "ScriptableObjects/RoboItem")]
-public class RoboFactory : ScriptableObject
+public class RoboFactorySO : ScriptableObject
 {
     [SerializeField]
     private Thing Thing;
